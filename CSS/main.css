@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+body {
+  background-color: #f1f1f1;
+}
+
+h1
+h2 {
+  font-family: "Architects Daughter", cursive;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #0d0d0d;
+}
+
+.container {
+  background-color: #415341;
+}
+/*# sourceMappingURL=main.css.map */

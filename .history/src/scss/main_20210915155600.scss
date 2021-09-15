@@ -7,17 +7,12 @@ body {
 }
 
 
-h1
-h2 {
+
+h1 {
     font-family: $headerFont;
 }
 
 p {
     font-family: $mainFont;
     font-size: 2rem;
-    color: $acColorDr;
-}
-
-.container {
-    background-color: $mainColor;
 }

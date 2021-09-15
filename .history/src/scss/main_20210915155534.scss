@@ -1,0 +1,16 @@
+@import "./variables";
+
+
+
+p {
+    font-family: $mainFont;
+    font-size: 2rem;
+}
+
+h1 {
+    font-family: $headerFont;
+}
+
+body {
+    background-color: #f1f1f1;
+}
