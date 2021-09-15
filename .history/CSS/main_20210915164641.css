@@ -1,0 +1,27 @@
+body {
+  background-color: #f1f1f1;
+}
+
+h1
+h2 {
+  font-family: "Architects Daughter", cursive;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1rem, 5vw, 4rem);
+  color: #0d0d0d;
+}
+
+.container {
+  background-color: #415341;
+}
+
+.intro-container {
+  display: grid;
+}
+img {
+  display: inline;
+  max-width: 100%;
+}
+/*# sourceMappingURL=main.css.map */
