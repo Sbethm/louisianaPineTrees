@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -15,7 +15,7 @@ h2 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: clamp(2rem, 5vw, 5rem);
   margin: 0 auto;
   text-align: center;
 }
@@ -23,8 +23,8 @@ h1 {
 p {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1rem, 3vw, 4rem);
-  line-height: clamp(1.8rem, 4vw, 4.8rem);
+  font-size: clamp(1rem, 3.5vw, 4rem);
+  line-height: clamp(1.8rem, 6vw, 4.8rem);
   color: #f2f2f2;
   padding: clamp(0.5em, 5%, 1.5em);
 }
@@ -33,10 +33,16 @@ p {
   background-color: #415341;
 }
 
+.background-grad {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(57, 64, 53, 0.772146)), color-stop(66%, rgba(242, 242, 242, 0.197917)), to(rgba(242, 242, 242, 0)));
+  background: linear-gradient(90deg, rgba(57, 64, 53, 0.772146) 0%, rgba(242, 242, 242, 0.197917) 66%, rgba(242, 242, 242, 0) 100%);
+}
+
 .intro-container {
   background-image: url(../img/forest-pine.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 6px solid #f2f2f2;
 }
 
 .quote {
@@ -44,5 +50,49 @@ p {
   text-align: right;
   font-size: clamp(1.8rem, 5vw, 4rem);
   line-height: clamp(2.5rem, 6vw, 5rem);
+}
+
+.call-to-action {
+  z-index: 2;
+}
+
+.triangle-bg {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.triangle-bg p {
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+  text-shadow: -3px 3px 4px #020202;
+}
+
+.triangle-bg .triangle-left {
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+  border-style: solid;
+  border-width: 500px 0 0 100vw;
+  border-color: transparent transparent transparent #708f70;
+}
+
+.triangle-bg .triangle-right {
+  height: 100%;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+  border-style: solid;
+  border-width: 0 0 500px 100vw;
+  border-color: transparent transparent #708f70 transparent;
 }
 /*# sourceMappingURL=main.css.map */

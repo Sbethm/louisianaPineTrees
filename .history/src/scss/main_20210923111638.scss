@@ -1,0 +1,92 @@
+@import "./variables";
+
+
+//GLOBAL STYLES
+*{box-sizing: border-box;}
+
+body {
+    margin: 0;
+    background-color: $mainColorLi;
+}
+
+h1,
+h2 {
+    font-family: $headerFont;
+    padding: clamp(0.5em, 5%, 1.5em);
+}
+
+h1{
+    font-size: clamp(2rem, 5vw ,5rem);
+    margin: 0 auto;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    font-family: $mainFont;
+    font-size: clamp(1rem, 3vw, 4rem);
+    line-height: clamp(1.8rem, 4vw, 4.8rem);
+    color: $mainColorLi;
+    padding: clamp(0.5em, 5%, 1.5em);
+}
+
+.container {
+    background-color: $mainColorDr;
+}
+
+.background-grad {
+    background: linear-gradient(90deg, rgba(57,64,53,0.7721463585434174) 0%, rgba(242,242,242,0.19791666666666663) 66%, rgba(242,242,242,0) 100%);
+}
+
+.intro-container {
+    background-image: url(../img/forest-pine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quote {
+    width: 50%;
+    text-align: right;
+    font-size: clamp(1.8rem, 5vw, 4rem);
+    line-height: clamp(2.5rem, 6vw, 5rem);
+}
+
+.call-to-action {
+    z-index: 2;
+}
+
+.triangle-bg {
+
+    &::before {
+        content: "";
+        top: -200;
+        width: 100%;
+        height: 0;
+        border-style: solid;
+        border-width: 300px 0 0 100vw;
+        border-color: transparent transparent transparent #007bff;
+        }
+}
+
+//This code was used to cause grid items to over lap. It worked very well, but I think it is unnecessary and bulkier code than I need for the result that I want.
+// .intro-container {
+//     display: grid;
+//     grid-template-columns: 50% 50%;
+//     grid-auto-rows: 100%;
+
+//     & img {
+//         grid-column: 1/3;
+//         grid-row: 1;
+//         display: inline;
+//         max-width: 100%;
+//         z-index: 1;
+//     }
+
+//     & .quote {
+//         grid-column: 2/3;
+//         grid-row: 1;
+//         align-self: center;
+//         z-index: 9;
+//     }
+// }
+
