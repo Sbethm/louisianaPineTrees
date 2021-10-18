@@ -351,22 +351,57 @@ body {
   background-color: #f2f2f2;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #f2f2f2;
+}
+
 h1 {
-  padding: clamp(0.5em, 5%, 1.5em);
-  font-family: "Architects Daughter", cursive;
-  font-size: clamp(2rem, 5vw, 5rem);
+  position: relative;
   margin: 0 auto;
+  padding: 1em 1.5em;
+  padding-top: calc(1em + 40px);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Architects Daughter", cursive;
+  font-size: clamp(2rem, 2vw, 3rem);
   text-align: center;
+  background-color: #f2f2f2;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 80px);
+  height: calc(100% - 41px);
+  border: 40px solid #f1f1f1;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  top: 0;
+  left: 0;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 40px);
+  border: 10px double #3a3a3a;
+  top: 0px;
+  left: 0px;
 }
 
 p {
   margin: 0;
   padding: 4em 3em;
   font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 1vw, 2rem);
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
-  line-height: 4.5rem;
+  line-height: clamp(2rem, 2vw, 3rem);
   color: #f2f2f2;
 }
 
@@ -390,14 +425,18 @@ p {
   padding: 4em 1em;
   width: 50%;
   text-align: right;
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: clamp(2rem, 2vw, 3rem);
+  line-height: clamp(3rem, 3vw, 4rem);
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
 }
 
 .hero__quote cite {
   font-size: 0.8em;
+}
+
+.hero__quote cite::before {
+  content: "~";
 }
 
 .call-to-action {
