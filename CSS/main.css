@@ -349,64 +349,54 @@ template {
 body {
   margin: 0;
   background-color: #f2f2f2;
+  font-size: 10px;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  background-color: #f2f2f2;
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-h1 {
-  position: relative;
-  margin: 0 auto;
-  padding: 1em 1.5em;
-  padding-top: calc(1em + 40px);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-family: "Architects Daughter", cursive;
-  font-size: clamp(2rem, 2vw, 3rem);
-  text-align: center;
-  background-color: #f2f2f2;
-}
-
-h1::before {
-  content: "";
-  position: absolute;
-  width: calc(100% - 80px);
-  height: calc(100% - 41px);
-  border: 40px solid #f1f1f1;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  top: 0;
-  left: 0;
-}
-
-h1::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: calc(100% + 40px);
-  border: 10px double #3a3a3a;
-  top: 0px;
-  left: 0px;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 p {
   margin: 0;
-  padding: 4em 3em;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1.5rem, 1vw, 2rem);
+  font-size: 1rem;
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
-  line-height: clamp(2rem, 2vw, 3rem);
+  line-height: 1.9rem;
   color: #f2f2f2;
 }
 
 .container {
   background-color: #415341;
+}
+
+header {
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #a89880;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
 }
 
 .hero-container {
@@ -416,19 +406,16 @@ p {
   border-bottom: 12px solid #f2f2f2;
 }
 
-.hero__background-grad {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(57, 64, 53, 0.772146)), color-stop(66%, rgba(242, 242, 242, 0.197917)), to(rgba(242, 242, 242, 0)));
-  background: linear-gradient(90deg, rgba(57, 64, 53, 0.772146) 0%, rgba(242, 242, 242, 0.197917) 66%, rgba(242, 242, 242, 0) 100%);
-}
-
 .hero__quote {
-  padding: 4em 1em;
+  padding: 4em 0 4em 2em;
   width: 50%;
   text-align: right;
-  font-size: clamp(2rem, 2vw, 3rem);
-  line-height: clamp(3rem, 3vw, 4rem);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.9rem;
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
+  text-shadow: 1px 0px 10px black;
 }
 
 .hero__quote cite {
@@ -454,7 +441,25 @@ p {
       align-content: center;
 }
 
+.triangle-bg h2 {
+  margin: 0 auto;
+  padding: 2em;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: -3px 3px 4px #020202;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
 .triangle-bg p {
+  padding: 2em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   -ms-grid-row: 1;
   grid-row: 1 / 1;
   -ms-grid-column: 1;
@@ -473,7 +478,7 @@ p {
 }
 
 .questions-container {
-  padding: 3em;
+  padding: 2em;
   background-color: #415341;
 }
 
@@ -484,7 +489,8 @@ p {
 }
 
 .question-wrapper .question__text {
-  padding-bottom: 0;
+  padding: 2em 0.5em 0 0.5em;
+  font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
   color: #708f70;
@@ -504,12 +510,8 @@ p {
 }
 
 .answer {
-  margin: 6em;
+  margin: 5em 3em;
   padding: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  min-width: 150px;
   border-radius: 100px;
   -webkit-box-shadow: -5px 5px 10px 0px #696767;
           box-shadow: -5px 5px 10px 0px #696767;
@@ -517,17 +519,20 @@ p {
   transition: all 0.3s ease;
 }
 
+.answer:hover, .answer :focus {
+  background-color: #ddad45;
+}
+
 .answer p {
-  padding: 1em 2em;
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: 600;
   color: #708f70;
 }
 
-.answer:hover, .answer :focus {
-  background-color: #f8cb6b;
-  -webkit-box-shadow: -5px 5px 10px 0px #696767;
-          box-shadow: -5px 5px 10px 0px #696767;
+.answer p:hover, .answer p :focus {
+  color: white;
 }
 
 .results-btn {
@@ -542,9 +547,9 @@ p {
 
 button {
   margin: 1em 0 2em 0;
-  padding: 1em 3em;
+  padding: 0.5em 1em;
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
+  font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
   color: #708f70;
